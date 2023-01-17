@@ -22,10 +22,7 @@ public class SalariedEmployee extends Employee{
         return getSalary();
     }
 
-    @Override
-    public double getPaymentAmount() {
-        return earning();
-    }
+   
 
 //    @Override
     // YOU CAN NOT OVERRIDE FINAL METHODS
@@ -40,8 +37,10 @@ public class SalariedEmployee extends Employee{
     }
 
 
-    
-    
+  @Override
+    public double getAmount(){
+        return earning();
+  }
     
     
 

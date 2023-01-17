@@ -1,5 +1,7 @@
 package Polymorephism;
 
+import java.io.Serializable;
+
 public abstract class Employee implements Payable{
 
     private final String firstName, lastName , socialSecurityNumber;

@@ -1,10 +1,11 @@
-package Tutorials;
+package Tutorials.T5;
 
-public class Circle {
+public class Circle extends TwoDimensionalShape{
     private double radius;
     private Point center;
 
     public Circle(double radius, Point center) {
+
         this.radius = radius;
         this.center = center;
     }
@@ -38,6 +39,10 @@ public class Circle {
         return  2 * Math.PI * radius;
     }
 
+    @Override
+    public  double getPerimeter() {
+        return getCircumference();
+    }
     public double distance(Circle another){
         return this.center.distance(another.center);
     }

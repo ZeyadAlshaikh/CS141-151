@@ -1,4 +1,4 @@
-package Tutorials;
+package Tutorials.T4;
 import java.util.Scanner;
 import static java.lang.System.out;
 

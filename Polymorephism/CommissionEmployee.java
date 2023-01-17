@@ -1,6 +1,6 @@
 package Polymorephism;
 
-public  class CommissionEmployee extends Employee{
+public   class CommissionEmployee extends Employee{
 
     private double grossSale, rate;
 
@@ -39,10 +39,16 @@ public  class CommissionEmployee extends Employee{
         return getGrossSale() * getRate();
     }
 
+
+
     @Override
-    public double getPaymentAmount() {
+    public double getAmount(){
         return earning();
     }
+   
+   
+
+
 
     
     

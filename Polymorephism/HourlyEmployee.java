@@ -44,7 +44,11 @@ public class HourlyEmployee extends  Employee{
     }
 
     @Override
-    public double getPaymentAmount() {
+    public double getAmount(){
         return earning();
     }
+
+
+  
+    
 }
