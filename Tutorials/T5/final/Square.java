@@ -1,22 +1,29 @@
-package Tutorials.T5;
+public class Square extends Rectangle{
 
-public class Square extends  TwoDimensionalShape{
 
-    double side;
-    public Square(double side) {
-        this.side = side;
+    public Square(String color, Point position, double length, double width) {
+        super(color, position, length, width);
     }
 
     @Override
     public String toString() {
-        return super.toString() ;
+        return super.toString()+ "\nSquare []";
     }
 
-    public double getArea(){
-        return  side* side;
+    @Override
+    public double getArea() {
+        System.out.println("From class Square");
+        return length * width;
     }
 
-    public double getPerimeter(){
-        return  4 * side;
+    @Override
+    public double getPerimeter() {
+        System.out.println("From class Square");
+        return 2 * (length + width);
     }
+
+    
+
+    
+    
 }

@@ -1,21 +1,50 @@
-package Tutorials.T5;
-
 public class Rectangle extends TwoDimensionalShape{
 
-    double lenght , width;
+    protected double length, width;
 
-    public Rectangle(double lenght, double widht) {
-       this.lenght = lenght;
-       this.width = widht;
+    public Rectangle(String color, Point position, double length, double width) {
+        super(color, position);
+        this.length = length;
+        this.width = width;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     @Override
-    public double getArea(){
-        return  width * lenght;
+    public String toString() {
+        return super.toString() + "\nRectangle [length=" + length + ", width=" + width + "]";
     }
 
     @Override
-    public double getPerimeter(){
-        return  2* (lenght+ width);
+    public double getArea() {
+       
+        return length * width;
     }
+
+    @Override
+    public double getPerimeter() {
+        
+        return 2 * (length + width);
+    } 
+    
+
+    
+
+    
+    
+    
 }

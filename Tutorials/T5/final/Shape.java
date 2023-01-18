@@ -1,12 +1,23 @@
-package Tutorials.T5;
+public class Shape {
+    
+    protected String color; 
+    protected Point position;
 
-public abstract class Shape {
+    public Shape(String color, Point position) {
+        this.color = color;
+        this.position = position;
+    } 
 
+    public double getArea(){
+        System.out.println("[Shape] Area is unknown! ");
+        return 0.0; 
+    }
 
     @Override
     public String toString() {
-        return "Shape{ }";
+        return "Shape [color=" + color + ", position=" + position + "]";
     }
 
-    public abstract double getArea();
+    
+    
 }

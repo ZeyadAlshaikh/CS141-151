@@ -1,5 +1,3 @@
-package Tutorials.T5;
-
 public class Point {
 
     private int x, y;
