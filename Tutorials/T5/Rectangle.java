@@ -18,4 +18,12 @@ public class Rectangle extends TwoDimensionalShape{
     public double getPerimeter(){
         return  2* (lenght+ width);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "lenght=" + lenght +
+                ", width=" + width +
+                '}';
+    }
 }

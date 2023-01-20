@@ -9,7 +9,9 @@ public class Square extends  TwoDimensionalShape{
 
     @Override
     public String toString() {
-        return super.toString() ;
+        return "Square{" +
+                "side=" + side +
+                '}';
     }
 
     public double getArea(){

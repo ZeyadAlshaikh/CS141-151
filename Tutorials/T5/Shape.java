@@ -1,6 +1,6 @@
 package Tutorials.T5;
 
-public abstract class Shape {
+public  class Shape {
 
 
     @Override
@@ -8,5 +8,8 @@ public abstract class Shape {
         return "Shape{ }";
     }
 
-    public abstract double getArea();
+    public  double getArea(){
+        return 0.0;
+    }
+
 }

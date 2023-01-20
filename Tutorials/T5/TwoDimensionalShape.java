@@ -1,7 +1,6 @@
 package Tutorials.T5;
 
-public abstract  class TwoDimensionalShape extends Shape{
-
+public   class TwoDimensionalShape extends Shape{
 
 
 
@@ -12,5 +11,7 @@ public abstract  class TwoDimensionalShape extends Shape{
     }
 
 
-    public abstract double getPerimeter();
+    public  double getPerimeter(){
+        return 0.0;
+    }
 }
