@@ -1,3 +1,4 @@
+package Tutorials.T5.final;
 public class Point {
 
     private int x, y;

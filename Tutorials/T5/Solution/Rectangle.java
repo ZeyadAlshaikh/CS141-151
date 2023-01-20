@@ -1,3 +1,5 @@
+package Tutorials.T5.final;
+
 public class Rectangle extends TwoDimensionalShape{
 
     protected double length, width;
