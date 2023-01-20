@@ -1,5 +1,3 @@
-package Tutorials.T5.final;
-
 public class Circle extends TwoDimensionalShape{
     private double radius;
     
