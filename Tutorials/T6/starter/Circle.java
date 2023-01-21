@@ -1,15 +1,12 @@
 public class Circle extends TwoDimensionalShape{
     private double radius;
-     
     
 
-    public Circle(String color, Point position,double radius) {
-        super(color, position);
+    public Circle(String color, Point center,double radius) {
+        super(color, center);
         this.radius = radius;
         
     }
-
-    
 
     public double getRadius() {
         return radius;
@@ -19,7 +16,7 @@ public class Circle extends TwoDimensionalShape{
         this.radius = radius;
     }
 
-   
+    
     @Override
     public double getArea(){
         //(𝜋 ∗ 𝑟𝑎𝑑𝑖𝑢𝑠^2)
@@ -36,12 +33,8 @@ public class Circle extends TwoDimensionalShape{
 
     @Override
     public String toString() {
-        return  "Circle[" +
+        return super.toString() + "\nCircle[" +
                 "radius=" + radius +
                 ']';
     }
-
-
-
-    
 }

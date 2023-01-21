@@ -1,4 +1,4 @@
-public class TwoDimensionalShape extends Shape{
+public abstract class TwoDimensionalShape extends Shape{
 
     public TwoDimensionalShape(String color, Point position) {
         super(color, position);

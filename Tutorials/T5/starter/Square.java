@@ -1,26 +1,27 @@
-public class Square {
+public class Square extends Rectangle{
 
-    private double side; 
-    public Square( double side) {
-        this.side = side; 
+    
+    public Square(String color, Point position, double length, double width ) {
+        super(color, position, length,width);
+        
     }
 
     @Override
     public String toString() {
-        return "Square []";
+        return "Square []"+super.toString();
     }
 
-    
+    @Override
     public double getArea() {
         
-        return side * side;
+        return super.getArea();
     }
 
-   
-    public double getPerimeter() {
+//    @Override
+//     public double getPerimeter() {
        
-        return 4 * side;
-    }
+//         return super.getPerimeter();
+//     }
 
     
 

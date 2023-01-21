@@ -1,16 +1,12 @@
 public class TwoDimensionalShape extends Shape{
 
-    
-
-  
-
     public TwoDimensionalShape(String color, Point position) {
         super(color, position);
     }
 
     @Override
     public String toString() {
-        return  "TwoDimensionalShape []";
+        return super.toString()+  "\nTwoDimensionalShape []";
     }
 
     public double getPerimeter(){
@@ -20,9 +16,7 @@ public class TwoDimensionalShape extends Shape{
     
     @Override
     public double getArea(){
-        System.out.println("[TwoDimensionalShape] Area Unknown!");
+        System.out.println("[Shape] Area is unknown! ");
         return 0.0; 
     }
-    
-    
 }

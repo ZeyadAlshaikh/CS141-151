@@ -3,7 +3,7 @@ public class Rectangle extends TwoDimensionalShape{
     protected double length, width;
 
     public Rectangle(String color, Point position, double length, double width) {
-        super( color,  position);
+        super(color, position);
         this.length = length;
         this.width = width;
     }
@@ -26,7 +26,7 @@ public class Rectangle extends TwoDimensionalShape{
 
     @Override
     public String toString() {
-        return  "Rectangle [length=" + length + ", width=" + width + "]";
+        return super.toString() + "\nRectangle [length=" + length + ", width=" + width + "]";
     }
 
     @Override

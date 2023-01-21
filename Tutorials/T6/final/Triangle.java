@@ -3,8 +3,7 @@ public class Triangle extends TwoDimensionalShape{
     private double sideA , base , sideC, height;
 
     public Triangle(String color, Point position, double sideA, double base, double sideC, double height) {
-        super(color,position);
-        
+        super(color, position);
         this.sideA = sideA;
         this.base = base;
         this.sideC = sideC;
@@ -45,16 +44,18 @@ public class Triangle extends TwoDimensionalShape{
 
     @Override
     public String toString() {
-        return "Triangle [sideA=" + sideA + ", base=" + base + ", sideC=" + sideC + ", height=" + height + "]";
+        return super.toString() +"\nTriangle [sideA=" + sideA + ", base=" + base + ", sideC=" + sideC + ", height=" + height + "]";
     }
 
-    
+    @Override
     public double getArea() {
+        // TODO Auto-generated method stub
         return  (base * height)/2;
     }
 
-
+    @Override
     public double getPerimeter() {
+        // TODO Auto-generated method stub
         return sideA + base + sideC;
     } 
 
