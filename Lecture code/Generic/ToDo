@@ -1,0 +1,12 @@
+Generic:
+1- Generic Method
+    - why we use generic method
+    - how to declare generic method
+    - keywords: erasure,type parameters, reference types, primitive types 
+2- Using relational operator 
+    - comparable interface
+
+3- Generic class
+
+4- ArrayList class
+5- wildcard
