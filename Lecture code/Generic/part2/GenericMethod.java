@@ -1,43 +1,59 @@
-package Generic.part2;
-
 import java.io.Serializable;
 
 public class GenericMethod {
     
  
-    public static <T> void printArray(T[] array){
-        System.out.println("Array of integer");
-        System.out.print("[");
-        for( T item : array){
-            System.out.print(item+", ");
-        }
-        System.out.println("]");
-    }
-
+    // public static <T> void printArray(T[] array){
+    //     System.out.println("Array of T");
     
+    //     System.out.print("[");
+    //     for( T item : array){
+    //         System.out.print(item);
+    //     }
+    //     System.out.println("]");
+    // }
 
-    public static void printArray(double[] array){
-        System.out.println("Array of double");
+     /*What is really happing  */
+    public static  void printArray(Object[] array){
+        System.out.println("From Generic method");
+        Object item_ = array[0]; 
+        System.out.println(item_.getClass().getSimpleName());
         System.out.print("[");
-        for( double item : array){
-            System.out.print(item);
-        }
-        System.out.println("]");
-    }
-
-   /*  public static void printArray(String[] array){
-        System.out.println("Array of String");
-        System.out.print("[");
-        for( String item : array){
+        for( Object item : array){
             System.out.print(item +", ");
         }
         System.out.println("]");
     }
-    */
-   
 
 
-    public static <T extends Comparable<T>> T max(T[] array){
+    // public static Integer max(Integer[] array){
+    //     Integer max = array[0];
+
+    //     for(Integer item: array){
+    //         if ( item > max)
+    //         max = item ; 
+    //     }
+
+    //     return max; 
+    // }
+    
+
+    
+
+    // public static Double max(Double[] array){
+    //     Double max = array[0];
+
+    //     for(Double item: array){
+    //         if ( item > max)
+    //         max = item ; 
+    //     }
+
+    //     return max; 
+    // }
+
+     
+    
+    public static <T extends Comparable> T max(T[] array){
         T max = array[0];
 
         for(T item: array){
@@ -47,6 +63,10 @@ public class GenericMethod {
 
         return max; 
     }
+   
+
+
+    
     
 
 
@@ -69,8 +89,9 @@ public class GenericMethod {
         Double[] doubleArray = {1.2, 2.1,3.2,4.4,5.2,6.0,7.2,8.9};
         String[] stringArray = {"Hello", "Orang", "Apple"};
 
-       printArray(intArry);
+        printArray(intArry);
         System.out.println(max(intArry));
+        printArray(doubleArray);
         System.out.println(max(doubleArray));
         printArray(stringArray);
         System.out.println(max(stringArray)); 
@@ -96,15 +117,7 @@ public class GenericMethod {
     //     System.out.println("]");
     // }
 
-    /*What is really happing  */
-    // public static  void printArray(Object[] array){
-    //     System.out.println("From Generic method");
-    //     System.out.print("[");
-    //     for( Object item : array){
-    //         System.out.print(item +", ");
-    //     }
-    //     System.out.println("]");
-    // }
+   
 
     // public static <T extends Comparable> T max(T[] array){
     //     /*

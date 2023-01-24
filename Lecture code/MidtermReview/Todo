@@ -1,0 +1,20 @@
+Midterm Topics: 
+1- Methods 
+    - declaration 
+    - overload 
+    - recursion 
+2- classes and objects
+    - Encapsulation 
+    - instance variables 
+    - methods (set & get , this.)
+    - Constructors (overload , default )(this() )
+    
+3- Classes and other concepts 
+    - final 
+    - static : class variables and methods
+4- Relation among classes 
+    - Composition 
+    - inheritence 
+        - super , sub, extends 
+
+
