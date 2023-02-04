@@ -1,0 +1,33 @@
+Software development methods
+1- Error types ( syntax, logical , runtime)
+2- Defensive Programming
+3- Testing 
+4- Debuggin
+5- error-handling techniques 
+    - if statements (includes else )
+    - Protecting from invalid input i.e email, phone number, postal code ...etc
+    - Exceptions handling (Robust and fault-tolerant programs )
+        * Exception: a problem that occurs during a program’s execution
+        * ArrayIndexOutOfBoundsException
+        * ClassCastException
+        * NullPointerException
+        * InputMismatchException
+        - try catch finally 
+        - multiple catch (Type1 | Type2 | Type3 e)
+
+    - Using throws
+    - Java Exception Hierarchy 
+        - Error
+        - Exception: 
+                -Unchecked exceptions ArrayIndexOutOfBoundsExceptions, ArithmeticExceptions ...etc
+                - Checked exceptions i.e. file processing
+
+    - Finally
+        - System.exit()
+    - Assertions
+        - assert expression1 : expression2;
+        - java -ea fileName.java
+        - i.e. the number must be >=0 and <= 10 
+            - assert (number >=0 && number <= 10): "Bad number";
+
+    - Best Practices (from slides)
