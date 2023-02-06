@@ -32,3 +32,5 @@ Graphical User Interface GUI:
     - add action listener [i.e. btn1.addActionListener(this);]
     - override actionPerformed method
 
+- Review slides 
+
