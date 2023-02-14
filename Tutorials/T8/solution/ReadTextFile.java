@@ -1,4 +1,5 @@
-
+// Fig. 15.6: ReadTextFile.java
+// This program reads a text file and displays each record.
 import java.io.IOException;
 import java.lang.IllegalStateException;
 import java.nio.file.Files;
@@ -13,15 +14,26 @@ public class ReadTextFile
 
    public static void main(String[] args)
    {
-       openFile();
-       readRecords();
-       closeFile();
+       try {
+           openFile();
+           readRecords();
+       } finally {
+           closeFile();
+       }
    } 
 
    // open file clients.txt
    public static void openFile()
    {
-         input = new Scanner(Paths.get("clients.txt"));
+      try
+      {
+         input = new Scanner(Paths.get("clients.txt")); 
+      } 
+      catch (IOException ioException)
+      {
+         System.err.println("Error opening file. Terminating.");
+         System.exit(1);
+      } 
    }
 
    // read record from file
@@ -30,13 +42,23 @@ public class ReadTextFile
       System.out.printf("%-10s%-12s%-12s%10s%n", "Account",
          "First Name", "Last Name", "Balance");
 
-     
-      while (input.hasNext()) // while there is more to read
+      try 
       {
-         // display record contents
-         System.out.printf("%-10d%-12s%-12s%10.2f%n", input.nextInt(),
-           input.next(), input.next(), input.nextDouble());
-      }
+         while (input.hasNext()) // while there is more to read
+         {
+            // display record contents                     
+            System.out.printf("%-10d%-12s%-12s%10.2f%n", input.nextInt(), 
+               input.next(), input.next(), input.nextDouble());
+         }
+      } 
+      catch (NoSuchElementException elementException)
+      {
+         System.err.println("File improperly formed. Terminating.");
+      } 
+      catch (IllegalStateException stateException)
+      {
+         System.err.println("Error reading from file. Terminating.");
+      } 
    } // end method readRecords
 
    // close file and terminate application
